@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Register Student</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial,sans-serif;
+        }
+
+        body{
+
+            background:#eef2f7;
+
+        }
+
+        .container{
+
+            width:420px;
+
+            margin:60px auto;
+
+            background:white;
+
+            padding:30px;
+
+            border-radius:15px;
+
+            box-shadow:0px 5px 15px rgba(0,0,0,.2);
+
+        }
+
+        h1{
+
+            text-align:center;
+
+            color:#0d6efd;
+
+            margin-bottom:30px;
+
+        }
+
+        label{
+
+            font-weight:bold;
+
+        }
+
+        input{
+
+            width:100%;
+
+            padding:12px;
+
+            margin-top:8px;
+
+            margin-bottom:20px;
+
+            border:1px solid #ccc;
+
+            border-radius:8px;
+
+            font-size:16px;
+
+        }
+
+        button{
+
+            width:100%;
+
+            padding:14px;
+
+            border:none;
+
+            border-radius:8px;
+
+            font-size:17px;
+
+            cursor:pointer;
+
+            margin-top:10px;
+
+        }
+
+        .register{
+
+            background:#198754;
+
+            color:white;
+
+        }
+
+        .home{
+
+            background:#0d6efd;
+
+            color:white;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Student Registration</h1>
+
+<form method="POST">
+
+<label>Student ID</label>
+
+<input
+type="text"
+name="student_id"
+placeholder="Enter Student ID"
+required>
+
+<label>Student Name</label>
+
+<input
+type="text"
+name="student_name"
+placeholder="Enter Student Name"
+required>
+
+<button class="register" type="submit">
+
+Register Student
+
+</button>
+
+</form>
+
+<br>
+
+<a href="/">
+
+<button class="home">
+
+Back to Dashboard
+
+</button>
+
+</a>
+
+</div>
+
+</body>
+
+</html>

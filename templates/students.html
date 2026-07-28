@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Registered Students</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial,sans-serif;
+        }
+
+        body{
+            background:#eef2f7;
+        }
+
+        .container{
+
+            width:90%;
+            margin:40px auto;
+
+        }
+
+        h1{
+
+            text-align:center;
+            color:#0d6efd;
+            margin-bottom:30px;
+
+        }
+
+        table{
+
+            width:100%;
+            border-collapse:collapse;
+            background:white;
+            box-shadow:0px 5px 15px rgba(0,0,0,.2);
+
+        }
+
+        th{
+
+            background:#0d6efd;
+            color:white;
+            padding:15px;
+            font-size:18px;
+
+        }
+
+        td{
+
+            padding:15px;
+            text-align:center;
+            border-bottom:1px solid #ddd;
+
+        }
+
+        tr:hover{
+
+            background:#f5f5f5;
+
+        }
+
+        .buttons{
+
+            margin-top:30px;
+            text-align:center;
+
+        }
+
+        button{
+
+            padding:12px 25px;
+            font-size:17px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            color:white;
+            margin:5px;
+
+        }
+
+        .home{
+
+            background:#0d6efd;
+
+        }
+
+        .register{
+
+            background:#198754;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Registered Students</h1>
+
+<table>
+
+<tr>
+
+<th>Student ID</th>
+<th>Student Name</th>
+
+</tr>
+
+{% for student in students %}
+
+<tr>
+
+<td>{{ student[0] }}</td>
+
+<td>{{ student[1] }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<div class="buttons">
+
+<a href="/register">
+
+<button class="register">
+
+Register New Student
+
+</button>
+
+</a>
+
+<a href="/">
+
+<button class="home">
+
+Back to Dashboard
+
+</button>
+
+</a>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

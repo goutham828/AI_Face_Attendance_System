@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Face Attendance System</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background:#eef2f7;
+        }
+
+        header{
+
+            background:#0d6efd;
+            color:white;
+            text-align:center;
+            padding:20px;
+            font-size:32px;
+            font-weight:bold;
+
+        }
+
+        .stats{
+
+            width:90%;
+            margin:30px auto;
+
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+            gap:20px;
+
+        }
+
+        .stat{
+
+            background:white;
+            border-radius:15px;
+            text-align:center;
+            padding:25px;
+
+            box-shadow:0px 4px 10px rgba(0,0,0,.2);
+
+        }
+
+        .stat h2{
+
+            color:#555;
+            margin-bottom:10px;
+
+        }
+
+        .stat h1{
+
+            color:#0d6efd;
+
+        }
+
+        .container{
+
+            width:90%;
+            margin:auto;
+
+        }
+
+        .cards{
+
+            display:grid;
+
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+            gap:25px;
+
+            margin-top:20px;
+
+        }
+
+        .card{
+
+            background:white;
+
+            padding:30px;
+
+            border-radius:15px;
+
+            text-align:center;
+
+            box-shadow:0px 5px 12px rgba(0,0,0,.2);
+
+            transition:.3s;
+
+        }
+
+        .card:hover{
+
+            transform:translateY(-8px);
+
+        }
+
+        .card h2{
+
+            margin-bottom:20px;
+
+            color:#333;
+
+        }
+
+        button{
+
+            width:100%;
+
+            padding:14px;
+
+            border:none;
+
+            border-radius:8px;
+
+            font-size:17px;
+
+            color:white;
+
+            cursor:pointer;
+
+        }
+
+        .green{background:#198754;}
+        .orange{background:#fd7e14;}
+        .purple{background:#6f42c1;}
+        .blue{background:#0d6efd;}
+        .dark{background:#343a40;}
+        .teal{background:#20c997;}
+
+        a{
+
+            text-decoration:none;
+
+        }
+
+        footer{
+
+            margin-top:50px;
+
+            background:#0d6efd;
+
+            color:white;
+
+            text-align:center;
+
+            padding:18px;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header>
+
+AI Face Attendance System
+
+</header>
+
+
+<div class="stats">
+
+<div class="stat">
+
+<h2>Total Students</h2>
+
+<h1>{{ total_students }}</h1>
+
+</div>
+
+<div class="stat">
+
+<h2>Total Face Images</h2>
+
+<h1>{{ total_images }}</h1>
+
+</div>
+
+<div class="stat">
+
+<h2>Today's Attendance</h2>
+
+<h1>{{ today_attendance }}</h1>
+
+</div>
+
+<div class="stat">
+
+<h2>Date</h2>
+
+<h1>{{ today }}</h1>
+
+</div>
+
+</div>
+
+
+<div class="container">
+
+<div class="cards">
+
+<div class="card">
+
+<h2>📝 Register Student</h2>
+
+<a href="/register">
+
+<button class="green">
+
+Register
+
+</button>
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h2>👨 View Students</h2>
+
+<a href="/students">
+
+<button class="teal">
+
+Students
+
+</button>
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h2>📷 Capture Face</h2>
+
+<a href="/capture">
+
+<button class="orange">
+
+Capture
+
+</button>
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h2>🧠 Train Model</h2>
+
+<a href="/train">
+
+<button class="purple">
+
+Train
+
+</button>
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h2>🎥 Start Attendance</h2>
+
+<a href="/start">
+
+<button class="blue">
+
+Start
+
+</button>
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h2>📋 Attendance Records</h2>
+
+<a href="/attendance">
+
+<button class="dark">
+
+Attendance
+
+</button>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+Developed by Goutham Reddy<br>
+
+AI Face Attendance System using Python • Flask • OpenCV
+
+</footer>
+
+</body>
+
+</html>
